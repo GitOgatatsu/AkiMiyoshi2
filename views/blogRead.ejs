@@ -8,14 +8,14 @@
 		<%- include( "./header" ); %>
 		<main>
 			<div class="blog-read">
-				<h1><%= oneBlog.title %></h1>
-				<img src="/public/images<%= oneBlog.image %>" alt="blog-image"/>
-				<p><%= oneBlog.textBody %></p>
+				<h1><%= singleBlog.title %></h1>
+				<img src="/public/images<%= singleBlog.image %>" alt="blog-image"/>
+				<p><%= singleBlog.textBody %></p>
 			</div>
 			<div class="bottom">
 				<% if ( session !== undefined ) { %>
-					<a href="/update/<%= oneBlog._id %>" class="update-button">編集</a>
-					<a href="/delete/<%= oneBlog._id %>" class="delete-button">削除</a>
+					<a href="/update/<%= singleBlog._id %>" class="update-button">編集</a>
+					<a href="/delete/<%= singleBlog._id %>" class="delete-button">削除</a>
 				<% } %>
 			</div>
 		</main>
