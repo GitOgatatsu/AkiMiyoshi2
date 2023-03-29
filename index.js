@@ -189,6 +189,11 @@ app.post("/user/login", async (req, res) => {
 
 
 
+app.get("*", (req, res) => {
+	res.render("error", { message: "ページが存在しません" });
+});
+
+
 // Listening
 app.listen( port, () => {
 	console.log( `Litening on localhost port ${port}` );
