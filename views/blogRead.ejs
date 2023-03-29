@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<%- include( "./head" ); %>
+		<title>blogReadページ</title>
+	</head>
+	<body>
+		<%- include( "./header" ); %>
+		<main>
+			<div class="blog-read">
+				<h1><%= oneBlog.title %></h1>
+				<img src="/public/images<%= oneBlog.image %>" alt="blog-image"/>
+				<p><%= oneBlog.textBody %></p>
+			</div>
+			<div class="bottom">
+				<% if ( session !== undefined ) { %>
+					<a href="/update/<%= oneBlog._id %>" class="update-button">編集</a>
+					<a href="/delete/<%= oneBlog._id %>" class="delete-button">削除</a>
+				<% } %>
+			</div>
+		</main>
+		<%- include( "./footer" ); %>
+	</body>
+</html>

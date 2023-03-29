@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<%- include( "./head" ); %>
+		<title>削除ページ</title>
+	</head>
+	<body>
+		<%- include( "./header" ); %>
+		<main>
+			<div class="blog-delete">
+				<form action="/delete/<%= oneBlog._id %>" method="POST">
+					<h1><%= oneBlog.title %></h1>
+					<img src="/public/images<%= oneBlog.image %>" alt="blog-image" />
+					<p><%= oneBlog.textBody %></p>
+					<button type="submit">削除する</button>
+				</form>
+			</div>
+		</main>
+		<%- include( "./footer" ); %>
+	</body>
+</html>
